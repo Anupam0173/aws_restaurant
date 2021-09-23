@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'Restaurant',
         'USER': 'root',
         'PASSWORD': 'rootroot',
-        'HOST': 'localhost',
+        'HOST': 'database-1.caosy0zy5jde.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
