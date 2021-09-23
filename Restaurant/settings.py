@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_jt-4&k&yfgyx467ha-p&mortsnj((^^!%mtzti1!)+pn)+)ai'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,13 +79,23 @@ WSGI_APPLICATION = 'Restaurant.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'restaurant',
+        'NAME': 'Restaurant',
         'USER': 'root',
-        'PASSWORD': 'Sharma@123',
+        'PASSWORD': 'rootroot',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'restaurant',
+#         'USER': 'root',
+#         'PASSWORD': 'Sharma@123',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
