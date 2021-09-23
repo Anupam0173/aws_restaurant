@@ -6,6 +6,7 @@ from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register('hview', views.HotelViewSet, basename='hotel')
+# router.register('hpview', views.HotelProduct, basename='hotelproduct')
 
 urlpatterns = [
     path('', include(router.urls)),

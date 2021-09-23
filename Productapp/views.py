@@ -3,7 +3,7 @@ from rest_framework import viewsets
 from .models import Product
 from .serializers import ProductSerializer
 
-# http://127.0.0.1:8000/product/pview/2/
+# http://127.0.0.1:8000/product/pview/2/                //for crud operations of Product.
 
 
 class ProductViewSet(viewsets.ModelViewSet):
