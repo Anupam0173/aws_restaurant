@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_jt-4&k&yfgyx467ha-p&mortsnj((^^!%mtzti1!)+pn)+)ai'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,26 +76,26 @@ WSGI_APPLICATION = 'Restaurant.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Restaurant',
-        'USER': 'root',
-        'PASSWORD': 'rootroot',
-        'HOST': 'database-1.caosy0zy5jde.us-east-1.rds.amazonaws.com',
-        'PORT': '3306',
-    }
-}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'restaurant',
+#         'NAME': 'Restaurant',
 #         'USER': 'root',
-#         'PASSWORD': 'Sharma@123',
-#         'HOST': 'localhost',
+#         'PASSWORD': 'rootroot',
+#         'HOST': 'database-1.caosy0zy5jde.us-east-1.rds.amazonaws.com',
 #         'PORT': '3306',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'restaurant',
+        'USER': 'root',
+        'PASSWORD': 'Sharma@123',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
 
 
 # Password validation
@@ -135,7 +135,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
