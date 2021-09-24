@@ -76,28 +76,28 @@ WSGI_APPLICATION = 'Restaurant.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Restaurant',
-        'USER': 'root',
-        'PASSWORD': 'rootroot',
-        'HOST': 'database-1.caosy0zy5jde.us-east-1.rds.amazonaws.com',
-        'PORT': '3306',
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'restaurant',
+#         'NAME': 'Restaurant',
 #         'USER': 'root',
-#         'PASSWORD': 'Sharma@123',
-#         'HOST': 'localhost',
+#         'PASSWORD': 'rootroot',
+#         'HOST': 'database-1.caosy0zy5jde.us-east-1.rds.amazonaws.com',
 #         'PORT': '3306',
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'restaurant',
+        'USER': 'root',
+        'PASSWORD': 'Sharma@123',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
 
 
 # Password validation
@@ -142,3 +142,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

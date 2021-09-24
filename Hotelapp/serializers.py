@@ -9,4 +9,5 @@ class HotelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hotel
         # fields = '__all__'
-        fields = ['name', 'address', 'opening_hour', 'hotel_product']
+        fields = ['name', 'address', 'opening_hour',
+                  'hotel_product', 'hotel_image']
